@@ -30,6 +30,12 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+
+    background-image: url("../images/white_brick_wall.png");
+    /* apply a background image */
+
+    background-repeat: repeat-x;
+    /* control how the background repeats */
 }
 ol, ul {
 	list-style: none;
@@ -91,6 +97,16 @@ body{
     background-color: cyan;
     width:40vw;
     height:40vh;
+
+    /*background-image:url("../images/bread.jpg");
+    positioning a background 
+
+background-position: 40px 20px;
+    control the spot a background image starts, set horizontal first htne vertical */
+
+background: blue url("../images/bread.jpg") no-repeat right bottom;
+    /* Background shorrthand replaces the individual background properties in one ine
+    the order is; colour, url, repeat, position-x, position-y */
 }
 
 .using-percent{
@@ -123,4 +139,25 @@ body{
     /* this removes bullets from the lists (CSS reset includes this) */
 }
 
+.image-contain, .image-cover{
+    border: black 3px solid;
+    width: 50vw;
+    height: 20vh;
+    background-image: url("../images/bread.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
 
+    /* apply CSS to multiple elements by lisiting them with a commma */
+}
+
+ /* background sounds allows you to scale the background - either with a fixed value or cover or container */
+
+ .image-contain{
+     background-size: contain;
+     /* contain scales the background image so it's always inside the element */
+ }
+
+ .image-cover{
+     background-size: cover;
+     /* cover scales the background image so it's always covering the element   */
+ }
